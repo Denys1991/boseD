@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  color: #292929;
+  font-size: 16px;
+  
+}
+
+button, input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+    width: 100%;
+}  
+.title{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -1.5px;  
+  margin: 120px 0 64px;
+}
+/*____________________________________________________________________________________HEADER*/
+.header{
+    height: 100vh;
+    padding: 64px 10px;
+    background-image: url(../img/Headphones.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__top{    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.header__bottom{
+    width: 100%;    
+}
+.header__bottom img{
+    margin-bottom: 40px;
+}
+.header__bottom h1{    
+    font-size: 48px;
+    line-height: 48px;    
+    font-weight: 800;    
+    font-style: italic;
+    letter-spacing: -1.5px;
+}
+
+/*____________________________________________________________________________________MENU*/
+
+.menu{
+    background-color: rgba(232, 239, 249, 1);
+    height: 100vh;
+    width: 100%;
+    padding: 64px 10px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+.menu:target{
+  transform: translateX(0);
+}
+.menu__top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 64px;
+}
+.menu__bottom{    
+    font-size: 22px;
+    line-height: 22px;    
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.menu__bottom ul{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;    
+}
+.menu__bottom ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*____________________________________________________________________________________main*/
+.products{
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product{
+  max-width: 324px; 
+  line-height: 140%;
+  padding: 0 10px;
+}
+.product img{
+  margin-bottom: 32px;
+  width: 100%;
+}
+.product h3{
+  margin-bottom: 8px;
+  font-weight: 700;  
+}
+.product_price{
+  margin-top: 12px;
+  font-weight: 700;  
+}
+
+
+
+
+.categories{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;  
+}
+.category{
+  margin: 0 auto;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column; 
+  
+}
+.category div{
+  margin-bottom: 16px;
+  display: flex;
+  width: 100%;
+  gap: 24px; 
+  justify-content: center;
+  
+}
+.category div img{
+  width: 100%;
+  object-fit: cover;
+}
+.category_last{
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.category p{
+  font-weight: 700;
+  line-height: 140%;
+}
+
+
+
+
+.how_to_buy{
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+}
+.how_to_buy-title{
+  text-align: start;
+  margin: 0;
+}
+.how_to_buy-title, .how_to_buy-content{
+  width: 50%;
+}
+
+.how_to_buy-content ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+.how_to_buy-content p{
+  line-height: 24px;
+  margin-bottom: 120px;
+}
+
+
+
+
+
+
+.footer{
+  background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 480px;
+}
+
+@media(max-width:1037px){
+  .category_foto-big{
+    max-width: 392px;
+  }
+  .category_foto-small{
+    max-width: 184px;
+  }
+}
+@media(max-width:617px){
+  .category_foto-big, .category_foto-small{
+    max-width: 130px;
+  }
+  .how_to_buy{
+    flex-direction: column;    
+    align-items: center;
+  }
+  .how_to_buy-title{
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .how_to_buy-title, .how_to_buy-content{
+    width: 100%;
+  }
+}
+@media(max-width:360px){
+  .title{
+    font-size: 32px;
+  }
+  .how_to_buy-title{
+    text-align: start;
+    
+  }
+}
